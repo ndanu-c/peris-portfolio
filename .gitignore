@@ -1,0 +1,15 @@
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System Files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Project specific
+# (Add any local environment files if you ever use them)
