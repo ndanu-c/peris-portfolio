@@ -236,12 +236,49 @@ img {
 }
 
 /* Who Am I Section */
+.highlight-statement {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    font-family: var(--heading-font);
+    font-style: italic;
+    border-left: 4px solid var(--primary-brown);
+    padding-left: 20px;
+}
+
+.text-link {
+    color: var(--primary-brown);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 .who-am-i-text p {
     margin-bottom: 20px;
     color: var(--light-text);
 }
 
 /* Skills Section */
+.skills-intro {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--primary-brown);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    margin: 60px 0 30px;
+    text-align: center;
+    color: var(--dark-brown);
+}
+
+.single-image {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -316,6 +353,49 @@ img {
 
 .gallery-item:hover .img-overlay {
     opacity: 1;
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background-color: var(--cream);
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+/* Paper rotation effect */
+.testimonial-card:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.testimonial-card:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.testimonial-card:nth-child(3) {
+    transform: rotate(-1.5deg);
+}
+
+.testimonial-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
 }
 
 /* Contact Section */
@@ -480,8 +560,17 @@ img {
         font-size: 2.5rem;
     }
 
-    .skills-grid {
+    .skills-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        transform: rotate(0deg) !important;
     }
 
     .section-title {
